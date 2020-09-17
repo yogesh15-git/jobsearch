@@ -11,6 +11,9 @@ app.use(cors());
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: true }));
 
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
+
 app.use('/', apiroutes);
 
 
