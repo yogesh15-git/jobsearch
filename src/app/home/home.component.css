@@ -1,0 +1,15 @@
+
+.div
+{
+background-image: url(../../assets/searchjob.jpg);
+background-position:100% 100%;
+height: 500px;
+background-size: cover;
+background-repeat: no-repeat;
+/* height: 100px; */
+
+}
+nav
+{
+    margin: 0px;
+}

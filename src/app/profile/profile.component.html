@@ -1,0 +1,448 @@
+<div class="bg">
+  <nav class="navbar navbar-dark bg-success">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">WebSiteName</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">View Jobs</a>
+          <ul class="dropdown-menu" style="background-color:linen">
+            <li><a routerLink="" routerLinkActive="active">Jobs by Categories</a></li>
+            <li><a routerLink="" routerLinkActive="active">Jobs by Location</a></li>
+
+
+          </ul>
+        </li>
+        <li class="active"><a href="#">Applied Jobs</a></li>
+        <li class="active"><a href="" routerLink="/profile">Profile</a></li>
+        <li class="active"><a href="">Upload Photo</a></li>
+        <li class="active"><a href="">Upload Document</a></li>
+
+
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a routerLink="/logout"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <div class="container" style="background-color: rgb(62, 209, 140); height: 150px;">
+
+    <p></p>
+
+  </div>
+
+  <br>
+
+
+
+  <div class="container">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+      <h3>Update your Profile</h3>
+
+
+      <input type="text" name="UserId" #UserId="ngModel" [(ngModel)]="EProService.EProfile.UserId" value="{{id}}">
+
+      <label for="ResumeHeadlinee">Resume Headline</label>
+      <br>
+      <textarea id="RHeadline" class="box" placeholder="Resume Headline" name="ResumeHeadline" required
+        #ResumeHeadline="ngModel" [(ngModel)]="EProService.EProfile.ResumeHeadline">
+
+
+
+    </textarea>
+
+      <div class="box">
+        <table>
+          <tr *ngFor="let profile of empdetails">
+
+            <td>{{profile.ResumeHeadline}}</td>
+
+          </tr>
+        </table>
+      </div>
+      <br>
+
+
+
+
+
+
+      <div class="model">
+        <div class="box">
+          <h5><b>Education</b></h5>
+
+          <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Add</button>
+
+          <table>
+
+
+            <tr *ngFor="let profile of empdetails">
+              <td>Degree: {{profile.Degree}}</td>
+            </tr>
+
+            <tr *ngFor="let profile of empdetails">
+              <td>Profile: {{profile.Specialization}}</td>
+            </tr>
+
+            <tr *ngFor="let profile of empdetails">
+              <td>University: {{profile.University}}</td>
+            </tr>
+
+            <tr *ngFor="let profile of empdetails">
+              <td>Passout Year: {{profile.PassoutYear}}</td>
+            </tr>
+          </table>
+
+        </div>
+
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+
+
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Education</h4>
+              </div>
+              <div class="modal-body">
+
+                <h6><b>Degree</b></h6>
+                <input type="text" class="form-Control" id="Degree" name="Degree" placeholder="Enter your Degree"
+                  required #Degree="ngModel" [(ngModel)]="EProService.EProfile.Degree">
+                <h6><b>Specialization</b></h6>
+                <input type="text" class="form-Control" id="Specialization" name="Specialization"
+                  placeholder="Enter your Specialization" required #Specialization="ngModel"
+                  [(ngModel)]="EProService.EProfile.Specialization">
+                <h6><b>University/College</b></h6>
+                <input type="text" class="form-Control" id="University" name="University"
+                  placeholder="Enter your University/College" required #University="ngModel"
+                  [(ngModel)]="EProService.EProfile.University">
+                <h6><b>Passout Year</b></h6>
+                <input type="number" class="form-Control" name="PassoutYear" placeholder="year" required
+                  #PassoutYear="ngModel" [(ngModel)]="EProService.EProfile.PassoutYear">
+                <h6><b>Grades in Percentage</b></h6>
+                <input type="number" class="form-Control" name="Grades" placeholder="percentage" min="0" max="100"
+                  step="1" required #percentage="ngModel" [(ngModel)]="EProService.EProfile.Grades">
+
+
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">save</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+
+      <br>
+
+      <div class="model">
+        <div class="box">
+          <h5><b>Skills</b></h5>
+          <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#exampleModal">
+            Add
+          </button>
+
+          <table>
+            <tr *ngFor="let profile of empdetails">
+              <td>Skill1: {{profile.Skill1}}</td>
+            </tr>
+
+            <tr *ngFor="let profile of empdetails">
+              <td>Skill2: {{profile.Skill2}}</td>
+            </tr>
+
+            <tr *ngFor="let profile of empdetails">
+              <td>Skill3: {{profile.Skill3}}</td>
+            </tr>
+
+
+          </table>
+
+        </div>
+
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add your Skills</h4>
+              </div>
+              <br>
+              <input type="text" class="form-Control" name="Skill1" placeholder="Skill 1" required #Skill1="ngModel"
+                [(ngModel)]="EProService.EProfile.Skill1">
+              <input type="text" class="form-Control" name="Skill2" placeholder="Skill 2" required #Skill2="ngModel"
+                [(ngModel)]="EProService.EProfile.Skill2">
+              <input type="text" class="form-Control" name="Skill3" placeholder="Skill 3" required #Skill3="ngModel"
+                [(ngModel)]="EProService.EProfile.Skill3">
+
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">save</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <br>
+
+      <div class="model">
+        <div class="box">
+          <h5><b>Projects</b></h5>
+          <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#exampleModal2">
+            Add
+          </button>
+
+          <table>
+            <tr *ngFor="let profile of empdetails">
+              <td>ProjectTitle: {{profile.ProjectTitle}}</td>
+            </tr>
+
+            <tr *ngFor="let profile of empdetails">
+              <td>{{profile.ProjectStatus}}</td>
+            </tr>
+
+
+            <tr *ngFor="let profile of empdetails">
+              <td>Working From: {{profile.WorkingFrom}}</td>
+            </tr>
+
+            <tr *ngFor="let profile of empdetails">
+              <td>Working To: {{profile.WorkingTo}}</td>
+            </tr>
+
+            <tr *ngFor="let profile of empdetails">
+              <td>Project Description: {{profile.ProjectDescription}}</td>
+            </tr>
+          </table>
+
+        </div>
+
+        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add your Projects</h4>
+              </div>
+
+              <div class="modal-body">
+                <h5><b>Project Title</b></h5>
+                <input type="text" class="form-Control" name="ProjectTitle" placeholder="Enter your Degree" required
+                  #ProjectTitle="ngModel" [(ngModel)]="EProService.EProfile.ProjectTitle">
+                <h5><b>Project Status</b></h5>
+                Running <input type="radio" name="ProjectStatus" value="ProjectRunning" required
+                  #ProjectStatus="ngModel" [(ngModel)]="EProService.EProfile.ProjectStatus">
+                Completed <input type="radio" name="ProjectStatus" value="ProjectCompleted" required
+                  #ProjectStatus="ngModel" [(ngModel)]="EProService.EProfile.ProjectStatus">
+                <h5><b>Working from</b></h5>
+                From <input type="month" name="WorkingFrom" required #WorkingFrom="ngModel"
+                  [(ngModel)]="EProService.EProfile.WorkingFrom">
+                &nbsp;
+                To <input type="month" name="WorkingTo" required #WorkingTo="ngModel"
+                  [(ngModel)]="EProService.EProfile.WorkingTo">
+                <h5><b>Details of Project</b></h5>
+                <textarea id="Pdetails" class="box" name="ProjectDescription" placeholder="Project Details" required
+                  #ProjectDescription="ngModel" [(ngModel)]="EProService.EProfile.ProjectDescription"></textarea>
+
+
+
+              </div>
+
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">save</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <br>
+
+      <div class="model">
+        <div class="box">
+          <h5><b>Certifications</b></h5>
+          <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#exampleModal3">
+            Add
+          </button>
+
+
+          <table>
+            <tr *ngFor="let profile of empdetails">
+              <td>Title: {{profile.Title}}</td>
+            </tr>
+
+            <tr *ngFor="let profile of empdetails">
+              <td>University: {{profile.Institution}}</td>
+            </tr>
+
+            <tr *ngFor="let profile of empdetails">
+              <td>From: {{profile.PeriodFrom}}</td>
+            </tr>
+
+            <tr *ngFor="let profile of empdetails">
+              <td>To: {{profile.PeriodTo}}</td>
+            </tr>
+
+            <tr *ngFor="let profile of empdetails">
+              <td>Description: {{profile.Description}}</td>
+            </tr>
+
+
+          </table>
+
+        </div>
+
+
+        <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Certifications</h4>
+              </div>
+
+              <div class="modal-body">
+                <h5><b>Title</b></h5>
+                <input type="text" class="form-Control" id="Title" name="Title" placeholder="Enter your Degree" required
+                  #Title="ngModel" [(ngModel)]="EProService.EProfile.Title">
+                <h5><b>institution</b></h5>
+                <input type="text" class="form-Control" id="Institution" name="Institution"
+                  placeholder="Enter your Degree" required #Institution="ngModel"
+                  [(ngModel)]="EProService.EProfile.Institution">
+                <h5><b>Period</b></h5>
+                &nbsp; From <input type="month" name="PeriodFrom" required #PeriodFrom="ngModel"
+                  [(ngModel)]="EProService.EProfile.PeriodFrom">
+                To <input type="month" name="PeriodTo" required #PeriodTo="ngModel"
+                  [(ngModel)]="EProService.EProfile.PeriodTo">
+                <h5><b>Description</b></h5>
+                <textarea id="Description" class="box" placeholder="Description" name="Description" required
+                  #Description="ngModel" [(ngModel)]="EProService.EProfile.Description"></textarea>
+
+
+
+
+
+              </div>
+
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">save</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+
+
+
+      <div class="left">
+
+        <table>
+          <tr *ngFor="let profile of empdetails">
+            <td><b>Date of birth: </b>{{profile.DateOfBirth}}</td>
+          </tr>
+        </table>
+        <input type="date" name="DateOfBirth" required #DateOfBirth="ngModel"
+          [(ngModel)]="EProService.EProfile.DateOfBirth">
+        <br><br>
+
+
+        <table>
+          <tr *ngFor="let profile of empdetails">
+            <td><b>Gender: </b> {{profile.Gender}}</td>
+          </tr>
+        </table>
+        Male <input type="radio" name="Gender" value="Male" required #Gender="ngModel"
+          [(ngModel)]="EProService.EProfile.Gender">
+        Female <input type="radio" name="Gender" value="Female" required #Gender="ngModel"
+          [(ngModel)]="EProService.EProfile.Gender">
+
+
+        <br><br>
+
+
+        <table>
+          <table>
+            <tr *ngFor="let profile of empdetails">
+              <td><b>MarritalStatus: </b>{{profile.MarritalStatus}}</td>
+            </tr>
+          </table>
+        </table>
+        UnMarried <input type="radio" name="MarritalStatus" value="Unmarried" required #MarritalStatus="ngModel"
+          [(ngModel)]="EProService.EProfile.MarritalStatus">
+        Married <input type="radio" name="MarritalStatus" value="Married" required #MarritalStatus="ngModel"
+          [(ngModel)]="EProService.EProfile.MarritalStatus">
+      </div>
+
+      <div class="right">
+
+        <table>
+          <tr *ngFor="let profile of empdetails">
+            <td><b>Address: </b>{{profile.Address}}</td>
+          </tr>
+        </table>
+        <input type="text" placeholder="Address" name="Address" required #Address="ngModel"
+          [(ngModel)]="EProService.EProfile.Address">
+        <br><br>
+
+
+        <table>
+          <tr *ngFor="let profile of empdetails">
+            <td><b>MarritalStatus: </b>{{profile.MarritalStatus}}</td>
+          </tr>
+        </table>
+        <input type="text" placeholder="Pincode" name="Pincode" required #Pincode="ngModel"
+          [(ngModel)]="EProService.EProfile.Pincode">
+        <br><br>
+
+        <table>
+          <tr *ngFor="let profile of empdetails">
+            <td><b>Hometown: </b>{{profile.Hometown}}</td>
+          </tr>
+        </table>
+        <input type="text" placeholder="Hometown" name="Hometown" required #Hometown="ngModel"
+          [(ngModel)]="EProService.EProfile.HomeTown">
+
+
+      </div>
+
+
+
+
+      <div>
+
+
+
+        <!-- <button type="submit" value="submit" class="registerbtn">Register</button> -->
+        <input type="submit" class="btn btn-info" value="Submit Button">
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>

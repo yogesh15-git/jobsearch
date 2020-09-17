@@ -1,0 +1,81 @@
+<nav class="navbar navbar-dark bg-success">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">JobSeeker</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <!-- <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">View Jobs</a>
+          <ul class="dropdown-menu" style="background-color:linen">
+            <li><a routerLink="/employeRegister">Jobs by Categories</a></li>
+            <li><a routerLink="/employerRegister">Jobs by Location</a></li>
+            
+  
+        </ul>
+        </li> -->
+      <li class="active"><a routerLink="/postjob">Post Jobs</a></li>
+      <li class="active"><a routerLink="/viewpostjobs">View Posted Jobs</a></li>
+      <li class="active"><a routerLink="/companyprofile">Company Profile</a></li>
+
+
+
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li class="active"><a href="#"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+
+
+
+<div class="container">
+  <h1 class="heading">Recent Posted Jobs!</h1>
+  <br>
+  <table>
+    <tr *ngFor="let post of postjobmodel">
+      <td><b>
+          <h3>Post Description: {{post.PostDescription}}</h3>
+        </b></td>
+    </tr>
+    <tr *ngFor="let post of postjobmodel">
+      <td><b>
+          <h3>Company Name: {{post.Company}}</h3>
+        </b></td>
+    </tr>
+    <tr *ngFor="let post of postjobmodel">
+      <td><b>
+          <h3>Experience:<br>{{post.Experience}}</h3>
+        </b></td>
+      <!-- </tr> -->
+      <!-- <tr *ngFor="let post of postjobmodel"> -->
+      <td><b>
+          <h3>Location: <br>{{post.Location}}</h3>
+        </b></td>
+    </tr>
+    <tr *ngFor="let post of postjobmodel">
+      <td><b>
+          <h3>Post Description: {{post.JobDescription}}</h3>
+        </b></td>
+    </tr>
+    <tr *ngFor="let post of postjobmodel">
+      <td><b>
+          <h3>Status: {{post.Status}}</h3>
+        </b></td>
+
+
+      <td><b>
+          <h3>Openings: {{post.Openings}}</h3>
+        </b></td>
+    </tr>
+
+    <tr *ngFor="let post of postjobmodel">
+      <td><b>
+          <h3>Post Time: {{post.PostTime}}</h3>
+        </b></td>
+    </tr>
+
+  </table>
+
+</div>

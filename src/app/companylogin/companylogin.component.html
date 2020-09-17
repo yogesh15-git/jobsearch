@@ -1,0 +1,64 @@
+<nav class="navbar navbar-dark bg-success">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+  
+    </ul>
+    
+    
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"> <span class="glyphicon glyphicon-user"></span> Register</a>
+      <ul class="dropdown-menu"style="background-color:linen">
+          <li><a routerLink="/employeRegister" routerLinkActive="active">Employee register</a></li>
+          <li><a routerLink="/employerRegister" routerLinkActive="active">Company register</a></li>
+          
+
+      </ul>
+      </li>
+    
+      
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+          <ul class="dropdown-menu"style="background-color:linen">
+              <li><a routerLink="/employelogin">Employee Login</a></li>
+              <li><a routerLink="/companylogin">Company Login</a></li>
+              
+    
+          </ul>
+          </li>
+        </ul>
+    
+  </div>
+</nav>
+
+<div class="container">
+  <form #f="ngForm" (ngSubmit)="onLogin(f)">
+      
+        <h1>Company Login</h1>
+        <p>Please fill in this form to Login.</p>
+        <hr>
+  
+        
+    
+        <label for="empmail"><b>Email</b></label>
+        <input type="text" placeholder="Email" name="email" required #email="ngModel" [(ngModel)]="loginservice.stlogin.email">
+        
+    
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required #password="ngModel" [(ngModel)]="loginservice.stlogin.password">
+    
+        <hr>
+        
+    
+        <button type="submit" value="submit" class="registerbtn">Login</button>
+     
+      
+      <div class="container signin">
+        <p>Don't have an account? <a href="#">Register</a></p>
+      </div>
+    </form>
+  </div>
+    
+  

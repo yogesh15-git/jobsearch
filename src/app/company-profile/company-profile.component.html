@@ -1,0 +1,180 @@
+<nav class="navbar navbar-dark bg-success">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">JobSeeker</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <!-- <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">View Jobs</a>
+        <ul class="dropdown-menu" style="background-color:linen">
+          <li><a routerLink="/employeRegister">Jobs by Categories</a></li>
+          <li><a routerLink="/employerRegister">Jobs by Location</a></li>
+          
+
+      </ul>
+      </li> -->
+      <li class="active"><a routerLink="/postjob">Post Jobs</a></li>
+      <li class="active"><a routerLink="/viewpostjobs">View Posted Jobs</a></li>
+      <li class="active"><a routerLink="/companyprofile">Company Profile</a></li>
+      
+      
+      
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li class="active"><a href="#"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+    </ul>
+
+  </div>
+</nav>
+<div class="box">
+<div class="container">
+
+  <form #f="ngForm" (ngSubmit)="CompanyForm(f)">
+    <h3><b>Company Profile Form</b></h3>
+    <div class="form-group">
+      
+      <input type="text" name="UserId" #UserId="ngModel" [(ngModel)]="companyprofileservice.Cprofile.UserId" value="{{id}}">
+      <br>
+        <label for="AssistantManager">Assistant Manager: </label>
+        <input type="email" class="form-control" id="Manager" name="AssistantManager" required #AssistantManager="ngModel" [(ngModel)]="companyprofileservice.Cprofile.AssistantManager">
+        
+        <div>
+        <table>
+          <tr *ngFor="let compro of compprofile">
+      
+              <td>{{compro.AssistantManager}}</td>
+      
+          </tr>
+      </table>
+    </div>
+        
+        <br>
+        <label for="CompanyName">Company Name:</label>
+        <input type="email" class="form-control" id="companyname" name="CompanyName" required #CompanyName="ngModel" [(ngModel)]="companyprofileservice.Cprofile.CompanyName">
+        
+        <div>
+          <table>
+            <tr *ngFor="let compro of compprofile">
+        
+                <td>{{compro.CompanyName}}</td>
+        
+            </tr>
+        </table>
+      </div>
+        
+        <br>
+        <label for="Email">Company Email Address:</label>
+        <input type="email" class="form-control" id="email" name="Email" required #Email="ngModel" [(ngModel)]="companyprofileservice.Cprofile.Email">
+       
+        <div>
+          <table>
+            <tr *ngFor="let compro of compprofile">
+        
+                <td>{{compro.Email}}</td>
+        
+            </tr>
+        </table>
+      </div>
+       
+       
+        <br>
+        <label for="CompantDescription">Company Description:</label>
+        <textarea class="form-control" rows="5" id="comment" name="Companydescription" required #CompanyDescription="ngModel" [(ngModel)]="companyprofileservice.Cprofile.Companydescription"></textarea>
+      
+        <div>
+          <table>
+            <tr *ngFor="let compro of compprofile">
+        
+                <td>{{compro.Companydescription}}</td>
+        
+            </tr>
+        </table>
+      </div>
+      
+        <br>
+        
+        
+       
+         
+        <div class="left">
+            <h5><b>City:</b></h5>
+            <input type="text" name="City" required #City="ngModel" [(ngModel)]="companyprofileservice.Cprofile.City">
+           
+            <div>
+              <table>
+                <tr *ngFor="let compro of compprofile">
+            
+                    <td>{{compro.City}}</td>
+            
+                </tr>
+            </table>
+          </div>
+           
+            <br><br>
+         
+        
+            <h5><b>Country:</b></h5>
+            <input type="text" name="Country"required #Country="ngModel" [(ngModel)]="companyprofileservice.Cprofile.Country">
+
+            <div>
+              <table>
+                <tr *ngFor="let compro of compprofile">
+            
+                    <td>{{compro.Country}}</td>
+            
+                </tr>
+            </table>
+          </div>
+       
+          </div>
+              
+              <div class="right">
+  
+            <h5><b>State:</b></h5>
+            <input type="text" name="State" required #State="ngModel" [(ngModel)]="companyprofileservice.Cprofile.State">
+            
+            <div>
+              <table>
+                <tr *ngFor="let compro of compprofile">
+            
+                    <td>{{compro.State}}</td>
+            
+                </tr>
+            </table>
+          </div>
+            
+            <br><br>
+            <h5><b>Pincode:</b></h5>
+            <input type="text"  name="Pincode" required #Pincode="ngModel" [(ngModel)]="companyprofileservice.Cprofile.Pincode">
+           
+            <div>
+              <table>
+                <tr *ngFor="let compro of compprofile">
+            
+                    <td>{{compro.Pincode}}</td>
+            
+                </tr>
+            </table>
+          </div>
+          
+          </div>
+          
+
+
+          <div>
+            
+            <!-- <button type="submit" value="submit" class="registerbtn">Register</button> -->
+            <input type="submit" class="btn-sm btn-block btn-success" value="Submit Button">
+  
+            </div>
+    </div>
+        
+          
+      
+     
+      
+</form>
+
+  
+</div>
+</div>

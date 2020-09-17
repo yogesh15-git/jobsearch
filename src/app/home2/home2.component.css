@@ -1,0 +1,50 @@
+
+  .header{
+      color:rgb(74, 42, 104);
+      font-size: 20px;
+      text-align: center;
+  }
+  .container{
+    background-color:honeydew;
+    padding-bottom:20px ;
+    
+  }
+  
+
+   .dot {
+    height: 150px;
+    width: 150px;
+    background-color:rgb(142, 236, 142);
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 63px;
+
+   }
+
+   .tb{
+     padding: 300px;
+     margin-left: 70px;
+   }
+   .thumb{
+     margin-left:120px;
+     width: 100px;
+     padding-bottom: 50px;
+     border-radius: 50px;
+    }
+    .heading{
+      font-size: 20px;
+      color: sandybrown;
+    }
+
+    .tb{
+      color:rgb(18, 123, 243) ;
+      margin-left: 11%;
+    }
+    
+  
+   
+  
+ 
+   
+   
+  

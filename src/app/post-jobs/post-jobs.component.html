@@ -1,0 +1,83 @@
+
+       <nav class="navbar navbar-dark bg-success">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">JobSeeker</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <!-- <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">View Jobs</a>
+              <ul class="dropdown-menu" style="background-color:linen">
+                <li><a routerLink="/employeRegister">Jobs by Categories</a></li>
+                <li><a routerLink="/employerRegister">Jobs by Location</a></li>
+                
+      
+            </ul>
+            </li> -->
+            <li class="active"><a routerLink="/postjob">Post Jobs</a></li>
+            <li class="active"><a routerLink="/viewpostjobs">View Posted Jobs</a></li>
+            <li class="active"><a>Views  Jobs</a></li>
+            <li class="active"><a routerLink="/companyprofile">Company Profile</a></li>
+            
+            
+            
+          </ul>
+      
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+          </ul>
+      
+        </div>
+      </nav>
+       
+    
+
+      
+       <div class="box">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+          <div class="form-group">
+            <label for="PostDescription">Post Description</label>
+            <input type="text" class="form-control"  name="PostDescription" required #PostDescription="ngModel" [(ngModel)]="postservice.pjobmodel.PostDescription">
+          
+          
+          </div>
+          <div class="form-group">
+            <label for="Company">Company</label>
+            <input type="text" class="form-control"   name="Company" required #Company="ngModel" [(ngModel)]="postservice.pjobmodel.Company">
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="Experience">Experience</label>
+              <input type="email" class="form-control"  placeholder="3yrs" name="Experience" required #Experience="ngModel" [(ngModel)]="postservice.pjobmodel.Experience">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="Location">Location</label>
+              <input type="text" class="form-control" id="Location" placeholder="Chandigarh"  name="Location" required #Location="ngModel" [(ngModel)]="postservice.pjobmodel.Location">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="JobDescription">Job Description</label>
+            <textarea class="form-control" rows="3" id="JobDescription" name="JobDescription" required #JobDescription="ngModel" [(ngModel)]="postservice.pjobmodel.JobDescription"></textarea>
+          </div>
+         
+          
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="Status">Status</label>
+              <input type="text" class="form-control" id="Status" placeholder="open" name="Status" required #Status="ngModel" [(ngModel)]="postservice.pjobmodel.Status">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="Openings">Openings</label>
+              <input type="text" class="form-control" id="Openings" placeholder="10"  name="Openings" required #Openings="ngModel" [(ngModel)]="postservice.pjobmodel.Openings">
+              
+            </div>
+            <div class="form-group col-md-4">
+              <label for="PostTime">Post Time</label>
+              <input type="date" class="form-control" id="PostTime"  name="PostTime" required #PostTime="ngModel" [(ngModel)]="postservice.pjobmodel.PostTime">
+            </div>
+          </div>
+          
+          <button type="submit" class="btn btn-primary ">Post Job</button>
+         </form>
+        </div>
+        
+

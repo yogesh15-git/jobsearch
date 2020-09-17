@@ -1,0 +1,23 @@
+.container{
+    width: 50%;
+}
+ .box{
+  width: 70%;
+  margin-left: 180px;
+  
+ }
+ .thumb2{
+    margin-right: 20%; 
+ }
+ 
+ .left{
+    float: left;
+    display: inline;
+    margin-left: 10%;
+  }
+ 
+  .right{
+    float: right;
+    display: inline;
+    margin-right: 20%;
+  }

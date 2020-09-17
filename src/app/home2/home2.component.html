@@ -1,0 +1,128 @@
+<nav class="navbar navbar-dark bg-success">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="dropdown"><a routerLink="/viewjobs" data-toggle="dropdown">View Jobs</a>
+        <!-- <ul class="dropdown-menu" style="background-color:linen">
+            <li><a routerLink="/employeRegister" routerLinkActive="active">Jobs by Categories</a></li>
+            <li><a routerLink="/employerRegister" routerLinkActive="active">Jobs by Location</a></li>
+        </ul> -->
+      </li>
+      <li class="active"><a>Applied Jobs</a></li>
+      <li class="active"><a routerLink="/profile">Profile</a></li>
+      <li class="active"><a>Upload Photo</a></li>
+      <li class="active"><a routerLink="/uploadDoc">Upload Documentee</a></li>
+      <li class="active"><a routerLink="/viewempprofile">viewempprofile</a></li>
+
+
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li class="active"><a href="#"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+<div class="container">
+  <div class="block">
+    <h1 class="header">Jobs by Location</h1>
+  </div>
+  <hr>
+
+  <!-- <div class="circle">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    
+  </div> -->
+
+</div>
+
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-2">
+      <div class="thumb">
+
+        <img src="../assets/chandigarh.jpg" alt="Lights" style="width: 100%;border-radius: 50%;" routerLink="/viewjobs">
+        <h1 class="heading">Chandigarh</h1>
+
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="thumb">
+
+        <img src="../assets/delhi.jpg" alt="Nature" style="width: 100%;border-radius: 50%;" routerLink="/viewjobs">
+        <h1 class="heading">Delhi</h1>
+
+
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="thumb">
+
+        <img src="../assets/gurgaon.jpg" alt="Fjords" style="width: 100%;border-radius: 50%;" routerLink="/viewjobs">
+        <h1 class="heading">Gurgaon</h1>
+
+
+      </div>
+    </div>
+
+    <div class="col-md-2">
+      <div class="thumb">
+
+        <img src="../assets/banglore.jpg" alt="Fjords" style="width: 100%;border-radius: 50%;" routerLink="/viewjobs">
+        <h1 class="heading">Bangalore</h1>
+
+
+      </div>
+    </div>
+
+    <div class="col-md-2">
+      <div class="thumb">
+
+        <img src="../assets/mumbai.jpg" alt="Fjords" style="width: 100%;border-radius: 50%;" routerLink="/viewjobs">
+        <h1 class="heading">Mumbai</h1>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<hr>
+
+<div class="container">
+  <div class="block">
+    <h1 class="header">Jobs by Categories</h1>
+  </div>
+  <hr>
+
+  <table class="tb" style="width:100%">
+    <tr>
+      <td><a href="#">Web Developer</a></td>
+      <td><a href="#">Digital Marketing</a></td>
+      <td><a href="#">Android Development</a></td>
+    </tr>
+
+    <tr>
+      <td><a href="#">IOS Development</a></td>
+      <td><a href="#">Backend Developer</a></td>
+      <td><a href="#">Data Analyst</a></td>
+    </tr>
+
+    <tr>
+      <td><a href="#">Account/Finance</a></td>
+      <td><a href="#">Human Resource</a></td>
+      <td><a href="#">Education Training</a></td>
+    </tr>
+  </table>
+</div>
