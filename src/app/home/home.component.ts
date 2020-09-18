@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   //   })
   // }
   this.id=sessionStorage.getItem('userid');
-  console.log(this.id);
+  // console.log(this.id);
   }
 
 }

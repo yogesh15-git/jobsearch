@@ -24,13 +24,13 @@ loginData:any=[];
     console.log(form.value);
     this.loginservice.newRecord(form.value).subscribe((res)=>{
       this.loginData=res;
-      console.log(res,'res')
+      // console.log(res,'res')
  
 
-      console.log(res['token'])
+      // console.log(res['token'])
       this.loginservice.setToken(res['token']);
       this.id=this.loginData.id._id;
-      console.log(this.id);
+      // console.log(this.id);
 
       sessionStorage.setItem('userid',this.id);
       this.router.navigateByUrl('/home');
@@ -46,7 +46,7 @@ loginData:any=[];
       
     },
     (err)=>{
-      console.log(err);
+      // console.log(err);
       
     })
   }

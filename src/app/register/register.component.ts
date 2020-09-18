@@ -17,11 +17,11 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(form:NgForm){
-    console.log(form.value);
+    // console.log(form.value);
    this.stService.newRecord(form.value).subscribe((res)=>{
      alert('data inserted successfully');
    },(err)=>{
-     console.log(err);
+    //  console.log(err);
    })
    this.router.navigateByUrl('/employelogin');
 

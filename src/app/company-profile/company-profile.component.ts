@@ -21,7 +21,7 @@ export class CompanyProfileComponent implements OnInit {
   ngOnInit() {
 
     this.id=sessionStorage.getItem('userid');
-   console.log(this.id);
+  //  console.log(this.id);
 
     this.companyprofileservice.viewcompanyprofile(this.id).subscribe((res)=>{
       this.viewcompanyprofile=res;
@@ -31,11 +31,11 @@ export class CompanyProfileComponent implements OnInit {
   }
 
   CompanyForm(form:NgForm){
-    console.log(form.value);
+    // console.log(form.value);
     this.companyprofileservice.NewRecord1(form.value).subscribe((res)=>{
       alert('data inserted successfully')
     },(err)=>{
-      console.log(err);
+      // console.log(err);
     })
     
   }

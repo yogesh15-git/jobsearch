@@ -25,7 +25,7 @@ export class ProfileComponent implements OnInit {
   id:string;
   ngOnInit() {
    this.id=sessionStorage.getItem('userid');
-   console.log(this.id);
+  //  console.log(this.id);
 
     // this.stService.getData().subscribe((res)=>{
     //   this.studentdata=res;
@@ -42,11 +42,11 @@ export class ProfileComponent implements OnInit {
   }
 
   onSubmit(form:NgForm){
-    console.log(form.value);
+    // console.log(form.value);
     this.EProService.NewRecord1(form.value).subscribe((res)=>{
       alert('data inserted successfully')
     },(err)=>{
-      console.log(err);
+      // console.log(err);
     })
   }
   
