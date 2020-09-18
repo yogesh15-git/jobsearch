@@ -1,47 +1,85 @@
+<div class="bg">
+  <nav class="navbar navbar-dark bg-success">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">WebSiteName</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">View Jobs</a>
+          <ul class="dropdown-menu" style="background-color:linen">
+            <li><a routerLink="/viewjobs" routerLinkActive="active">Jobs by Categories</a></li>
+            <li><a routerLink="/viewjobs" routerLinkActive="active">Jobs by Location</a></li>
 
-<div class="container">
-  <h3>Upload your Documents</h3>
+
+          </ul>
+        </li>
+        <!-- <li class="active"><a routerLink="">Applied Jobs</a></li> -->
+        <li class="active"><a routerLink="" routerLink="/profile">Profile</a></li>
+        <li class="active"><a routerLink="/uploadDoc">Upload Photo</a></li>
+        <li class="active"><a routerLink="/uploadDoc">Upload Document</a></li>
 
 
-<div class="custom-file">
-  <label class="custom-file-label" for="customFileLang">Upload resume</label>
-  <input type="file" class="custom-file-input" id="customFileLang" lang="pl-Pl">
-  
-</div>
-<br>
+      </ul>
 
-<div class="custom-file">
-  <label class="custom-file-label" for="customFileLang">Upload Document 1 </label>
-  <input type="file" class="custom-file-input" id="customFileLang" lang="fr">
- 
-</div>
-<br>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a routerLink="/logout"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+      </ul>
 
-<div class="custom-file">
-  <label class="custom-file-label" for="customFileLang">Upload Document 2 </label>
-  <input type="file" class="custom-file-input" id="customFileLang" lang="in">
-  
-</div>
-<br>
+    </div>
+  </nav>
 
-<div class="custom-file">
-  <label class="custom-file-label" for="customFileLang">Upload Document 3</label>
-  <input type="file" class="custom-file-input" id="customFileLang" lang="zn">
- 
-</div>
-<br>
+  <div class="container" style="background-color: rgb(62, 209, 140); height: 150px;">
 
-<div class="custom-file">
-  <label class="custom-file-label" for="customFileLang">Upload Document 4</label>
-  <input type="file" class="custom-file-input" id="customFileLang" lang="de">
+    <p></p>
 
-</div>
-<br>
+  </div>
 
-<div class="custom-file">
-  <label class="custom-file-label" for="customFileLang">Upload Document 5</label>
-  <input type="file" class="custom-file-input" id="customFileLang" lang="ru">
-  
-</div>
+  <br>
 
+  <div class="container">
+    <h3>Upload your Documents</h3>
+
+
+    <div class="custom-file">
+      <label class="custom-file-label" for="customFileLang">Upload resume</label>
+      <input type="file" class="custom-file-input" id="customFileLang" lang="pl-Pl">
+
+    </div>
+    <br>
+
+    <div class="custom-file">
+      <label class="custom-file-label" for="customFileLang">Upload Document 1 </label>
+      <input type="file" class="custom-file-input" id="customFileLang" lang="fr">
+
+    </div>
+    <br>
+
+    <div class="custom-file">
+      <label class="custom-file-label" for="customFileLang">Upload Document 2 </label>
+      <input type="file" class="custom-file-input" id="customFileLang" lang="in">
+
+    </div>
+    <br>
+
+    <div class="custom-file">
+      <label class="custom-file-label" for="customFileLang">Upload Document 3</label>
+      <input type="file" class="custom-file-input" id="customFileLang" lang="zn">
+
+    </div>
+    <br>
+
+    <div class="custom-file">
+      <label class="custom-file-label" for="customFileLang">Upload Document 4</label>
+      <input type="file" class="custom-file-input" id="customFileLang" lang="de">
+
+    </div>
+    <br>
+
+    <div class="custom-file">
+      <label class="custom-file-label" for="customFileLang">Upload Document 5</label>
+      <input type="file" class="custom-file-input" id="customFileLang" lang="ru">
+
+    </div>
+
+  </div>
 </div>
