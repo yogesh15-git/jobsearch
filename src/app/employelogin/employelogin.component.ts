@@ -21,7 +21,7 @@ loginData:any=[];
   }
 
   onLogin(form:NgForm){
-    console.log(form.value);
+    // console.log(form.value);
     this.loginservice.newRecord(form.value).subscribe((res)=>{
       this.loginData=res;
       // console.log(res,'res')
